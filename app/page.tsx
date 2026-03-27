@@ -1,3 +1,4 @@
+// Home page - JTH Graphix Production
 import { HeroSection } from '@/components/home/hero-section'
 import { ServicesPreview } from '@/components/home/services-preview'
 import { WhyChooseUs } from '@/components/home/why-choose-us'

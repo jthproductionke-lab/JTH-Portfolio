@@ -1,14 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, FileImage, Image, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2 } from 'lucide-react'
+import { ArrowRight, FileImage, Image as ImageIcon, Palette, Sparkles, Share2, CreditCard, BookOpen, Printer, Globe, Flag, Calendar, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import services from '@/data/services.json'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FileImage,
-  Image,
+  Image: ImageIcon,
   Palette,
   Sparkles,
   Share2,
@@ -61,29 +62,46 @@ export function ServicesPreview() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={`/services/${service.slug}`} className="group block h-full">
-                  <div className="relative h-full p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
-                    {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
+                  <div className="relative h-full rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden">
+                    {/* Service Image */}
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                      
+                      {/* Icon */}
+                      <div className="absolute bottom-3 left-3">
+                        <div className="w-10 h-10 rounded-xl bg-card/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                          <Icon className="w-5 h-5 text-primary" />
+                        </div>
+                      </div>
                     </div>
                     
-                    {/* Category Badge */}
-                    <span className="inline-block px-2 py-0.5 rounded text-xs font-medium bg-accent/10 text-accent mb-3">
-                      {service.category}
-                    </span>
-                    
                     {/* Content */}
-                    <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {service.shortDescription}
-                    </p>
+                    <div className="p-5">
+                      {/* Category Badge */}
+                      <span className="inline-block px-2 py-0.5 rounded text-xs font-medium bg-accent/10 text-accent mb-2">
+                        {service.category}
+                      </span>
+                      
+                      {/* Title */}
+                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {service.shortDescription}
+                      </p>
 
-                    {/* Arrow */}
-                    <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      {/* Arrow */}
+                      <div className="mt-3 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </div>
                 </Link>

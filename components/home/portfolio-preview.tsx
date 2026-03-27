@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -54,52 +55,55 @@ export function PortfolioPreview() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border">
-                {/* Placeholder gradient background */}
-                <div 
-                  className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10"
-                  style={{
-                    backgroundImage: `linear-gradient(135deg, hsl(${index * 30}, 70%, 50%, 0.1), hsl(${index * 30 + 60}, 70%, 50%, 0.1))`
-                  }}
-                />
-                
-                {/* Content Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                
-                {/* Project Info */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                  {/* Category Badge */}
-                  <div className="flex justify-end">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${categoryColors[item.category] || 'bg-primary/10 text-primary'}`}>
-                      {item.category}
-                    </span>
-                  </div>
+              <Link href="/portfolio" className="block">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all">
+                  {/* Portfolio Image */}
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                   
-                  {/* Title & Description */}
-                  <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                      {item.description}
-                    </p>
-                    <div className="flex items-center gap-2">
-                      {item.tags.slice(0, 3).map(tag => (
-                        <span key={tag} className="text-xs text-muted-foreground px-2 py-1 rounded bg-muted">
-                          {tag}
-                        </span>
-                      ))}
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  
+                  {/* Project Info */}
+                  <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                    {/* Category Badge */}
+                    <div className="flex justify-end">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${categoryColors[item.category] || 'bg-primary/10 text-primary'}`}>
+                        {item.category}
+                      </span>
+                    </div>
+                    
+                    {/* Title & Description */}
+                    <div className="translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center gap-2">
+                        {item.tags.slice(0, 3).map(tag => (
+                          <span key={tag} className="text-xs text-muted-foreground px-2 py-1 rounded bg-muted">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* View Icon */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center shadow-lg">
+                      <ExternalLink className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
                 </div>
-
-                {/* View Icon */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center shadow-lg">
-                    <ExternalLink className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

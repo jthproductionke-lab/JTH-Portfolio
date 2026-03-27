@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink, ArrowRight, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -66,15 +67,13 @@ export function PortfolioGallery() {
                 onClick={() => setSelectedItem(item)}
               >
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all">
-                  {/* Gradient background */}
-                  <div 
-                    className="absolute inset-0"
-                    style={{
-                      background: `linear-gradient(135deg, 
-                        hsl(${(parseInt(item.id) * 45) % 360}, 60%, 50%, 0.15), 
-                        hsl(${(parseInt(item.id) * 45 + 60) % 360}, 60%, 50%, 0.1)
-                      )`
-                    }}
+                  {/* Portfolio Image */}
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   
                   {/* Hover Overlay */}
@@ -128,15 +127,15 @@ export function PortfolioGallery() {
                 </button>
 
                 {/* Image Area */}
-                <div 
-                  className="aspect-video"
-                  style={{
-                    background: `linear-gradient(135deg, 
-                      hsl(${(parseInt(selectedItem.id) * 45) % 360}, 60%, 50%, 0.2), 
-                      hsl(${(parseInt(selectedItem.id) * 45 + 60) % 360}, 60%, 50%, 0.15)
-                    )`
-                  }}
-                />
+                <div className="relative aspect-video">
+                  <Image
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                </div>
 
                 {/* Content */}
                 <div className="p-6 lg:p-8">

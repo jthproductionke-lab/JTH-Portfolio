@@ -7,6 +7,8 @@ import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import './globals.css'
 
+// JTH Graphix Production - Premium Creative Studio
+
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter'

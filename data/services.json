@@ -7,6 +7,7 @@
     "description": "Create stunning, attention-grabbing flyers that communicate your message effectively. From church events to product launches, our flyers are designed to convert viewers into customers.",
     "icon": "FileImage",
     "category": "Print",
+    "image": "/images/services/flyer-design.jpg",
     "features": [
       "Custom layouts tailored to your brand",
       "Print-ready files in multiple formats",
@@ -35,6 +36,7 @@
     "description": "Make a big impact with bold, professionally designed posters that command attention. Perfect for events, awareness campaigns, and promotional activities.",
     "icon": "Image",
     "category": "Print",
+    "image": "/images/services/poster-design.jpg",
     "features": [
       "Large format design expertise",
       "Eye-catching typography",
@@ -63,6 +65,7 @@
     "description": "Your logo is the face of your brand. We create distinctive, memorable logos that capture your brand essence and leave lasting impressions.",
     "icon": "Palette",
     "category": "Branding",
+    "image": "/images/services/logo-design.jpg",
     "features": [
       "Multiple concept options",
       "Comprehensive research process",
@@ -92,6 +95,7 @@
     "description": "Build a cohesive brand identity that resonates with your audience. We develop comprehensive branding systems including colors, typography, and visual guidelines.",
     "icon": "Sparkles",
     "category": "Branding",
+    "image": "/images/services/branding.jpg",
     "features": [
       "Complete brand strategy",
       "Color palette development",
@@ -121,6 +125,7 @@
     "description": "Stand out on social media with scroll-stopping graphics designed for engagement. We create platform-optimized content that drives results.",
     "icon": "Share2",
     "category": "Digital",
+    "image": "/images/services/social-media.jpg",
     "features": [
       "Platform-optimized sizing",
       "Trending design styles",
@@ -149,6 +154,7 @@
     "description": "Make memorable first impressions with professionally designed business cards that reflect your brand quality and professionalism.",
     "icon": "CreditCard",
     "category": "Print",
+    "image": "/images/services/business-cards.jpg",
     "features": [
       "Premium design options",
       "Multiple finishing suggestions",
@@ -177,6 +183,7 @@
     "description": "Tell your story effectively with beautifully designed brochures. From bi-folds to tri-folds, we create marketing materials that inform and persuade.",
     "icon": "BookOpen",
     "category": "Print",
+    "image": "/images/services/brochures.jpg",
     "features": [
       "Multiple fold options",
       "Strategic content layout",
@@ -205,6 +212,7 @@
     "description": "We ensure your designs translate perfectly to print with proper specifications, color management, and production-ready files.",
     "icon": "Printer",
     "category": "Print",
+    "image": "/images/services/printing.jpg",
     "features": [
       "CMYK color optimization",
       "Bleed and trim specifications",
@@ -233,6 +241,7 @@
     "description": "Get online with a stunning, mobile-responsive website that showcases your brand and converts visitors into customers.",
     "icon": "Globe",
     "category": "Digital",
+    "image": "/images/services/website-design.jpg",
     "features": [
       "Mobile-first responsive design",
       "SEO optimization",
@@ -261,6 +270,7 @@
     "description": "Create impactful banners that capture attention and communicate your message effectively, whether for digital or physical display.",
     "icon": "Flag",
     "category": "Print",
+    "image": "/images/services/banner-design.jpg",
     "features": [
       "Multiple size options",
       "Indoor/outdoor specifications",
@@ -289,6 +299,7 @@
     "description": "Make your events unforgettable with comprehensive graphic packages that create buzz and drive attendance.",
     "icon": "Calendar",
     "category": "Digital",
+    "image": "/images/services/event-graphics.jpg",
     "features": [
       "Complete event packages",
       "Multi-platform designs",
@@ -317,6 +328,7 @@
     "description": "Present a unified, professional image with comprehensive corporate materials that reinforce your brand at every touchpoint.",
     "icon": "Building2",
     "category": "Branding",
+    "image": "/images/services/corporate-materials.jpg",
     "features": [
       "Complete stationery suite",
       "Presentation templates",

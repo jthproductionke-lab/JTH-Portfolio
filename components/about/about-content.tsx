@@ -109,15 +109,13 @@ export function AboutContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 flex items-center justify-center">
-                <div className="relative w-32 h-32">
-                  <Image
-                    src="/images/logo.png"
-                    alt="JTH Graphix Production"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+              <div className="aspect-square rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/about-studio.jpg"
+                  alt="JTH Graphix Production Studio"
+                  fill
+                  className="object-cover"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-2xl -z-10" />
