@@ -71,7 +71,7 @@ export function HeroSection() {
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-foreground mb-6 text-balance leading-[1.1]">
               Design That<br />
-              <span className="text--primary text-gradient">Moves Business</span>
+              <span className="text-primary">Moves Business</span>
             </h1>
           </motion.div>
 

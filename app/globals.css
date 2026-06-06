@@ -157,11 +157,11 @@
 @layer utilities {
   /* Text effects */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary;
   }
   
   .text-gradient-dark {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-dark via-primary to-primary-light;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary;
   }
   
   /* Glow effects */
