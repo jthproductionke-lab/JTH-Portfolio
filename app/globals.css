@@ -178,15 +178,20 @@
   
   /* Smooth transitions */
   .transition-smooth {
-    @apply transition-all duration-300 ease-out;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
   }
   
   /* Hover effects */
   .hover-lift {
-    @apply transition-smooth hover:-translate-y-1;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
   }
   
   .hover-lift:hover {
+    transform: translateY(-0.25rem);
     box-shadow: 0 0 30px rgba(30, 91, 168, 0.25);
   }
   
