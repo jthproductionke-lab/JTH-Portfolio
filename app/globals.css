@@ -4,77 +4,86 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* JTH Graphix Production - Light Mode */
-  --background: #F8FAFC;
-  --foreground: #0F172A;
+  /* JTH Graphix Production - Official Brand Colors - Light Mode */
+  --background: #FAFBFC;
+  --foreground: #0A0E27;
   --card: #FFFFFF;
-  --card-foreground: #0F172A;
+  --card-foreground: #0A0E27;
   --popover: #FFFFFF;
-  --popover-foreground: #0F172A;
-  --primary: #004AAD;
+  --popover-foreground: #0A0E27;
+  --primary: #1E5BA8;
   --primary-foreground: #FFFFFF;
-  --secondary: #E2E8F0;
-  --secondary-foreground: #0F172A;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
-  --accent: #D4AF37;
-  --accent-foreground: #0F172A;
-  --destructive: oklch(0.577 0.245 27.325);
+  --primary-light: #2B7BC4;
+  --primary-dark: #164080;
+  --secondary: #F0F4F8;
+  --secondary-foreground: #0A0E27;
+  --muted: #E8ECF1;
+  --muted-foreground: #6B7E99;
+  --accent: #FFFFFF;
+  --accent-foreground: #1E5BA8;
+  --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(15,23,42,0.08);
-  --input: rgba(15,23,42,0.08);
-  --ring: #004AAD;
-  --chart-1: #004AAD;
-  --chart-2: #D4AF37;
-  --chart-3: #0369A1;
-  --chart-4: #0F766E;
-  --chart-5: #7C3AED;
-  --radius: 1rem;
+  --border: rgba(30, 91, 168, 0.08);
+  --input: rgba(30, 91, 168, 0.06);
+  --ring: #1E5BA8;
+  --chart-1: #1E5BA8;
+  --chart-2: #2B7BC4;
+  --chart-3: #164080;
+  --chart-4: #0A0E27;
+  --chart-5: #6B7E99;
+  --radius: 0.75rem;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #0F172A;
-  --sidebar-primary: #004AAD;
+  --sidebar-foreground: #0A0E27;
+  --sidebar-primary: #1E5BA8;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F1F5F9;
-  --sidebar-accent-foreground: #0F172A;
-  --sidebar-border: rgba(15,23,42,0.08);
-  --sidebar-ring: #004AAD;
+  --sidebar-accent: #F0F4F8;
+  --sidebar-accent-foreground: #0A0E27;
+  --sidebar-border: rgba(30, 91, 168, 0.08);
+  --sidebar-ring: #1E5BA8;
 }
 
 .dark {
-  /* JTH Graphix Production - Dark Mode */
-  --background: #0B1220;
-  --foreground: #E5E7EB;
-  --card: #111827;
-  --card-foreground: #E5E7EB;
-  --popover: #111827;
-  --popover-foreground: #E5E7EB;
-  --primary: #004AAD;
+  /* JTH Graphix Production - Official Brand Colors - Dark Mode */
+  --background: #0A0E27;
+  --foreground: #F0F4F8;
+  --card: #111C3D;
+  --card-foreground: #F0F4F8;
+  --popover: #111C3D;
+  --popover-foreground: #F0F4F8;
+  --primary: #2B7BC4;
   --primary-foreground: #FFFFFF;
-  --secondary: #1F2937;
-  --secondary-foreground: #E5E7EB;
-  --muted: #1F2937;
-  --muted-foreground: #9CA3AF;
-  --accent: #D4AF37;
-  --accent-foreground: #0B1220;
-  --destructive: oklch(0.396 0.141 25.723);
+  --primary-light: #3A92DC;
+  --primary-dark: #1E5BA8;
+  --secondary: #1A2744;
+  --secondary-foreground: #F0F4F8;
+  --muted: #1A2744;
+  --muted-foreground: #A0B3CC;
+  --accent: #FFFFFF;
+  --accent-foreground: #1E5BA8;
+  --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(255,255,255,0.08);
-  --input: rgba(255,255,255,0.08);
-  --ring: #004AAD;
-  --chart-1: #3B82F6;
-  --chart-2: #D4AF37;
-  --chart-3: #06B6D4;
-  --chart-4: #10B981;
-  --chart-5: #A78BFA;
-  --sidebar: #111827;
-  --sidebar-foreground: #E5E7EB;
-  --sidebar-primary: #3B82F6;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.06);
+  --ring: #2B7BC4;
+  --chart-1: #2B7BC4;
+  --chart-2: #3A92DC;
+  --chart-3: #1E5BA8;
+  --chart-4: #F0F4F8;
+  --chart-5: #A0B3CC;
+  --sidebar: #111C3D;
+  --sidebar-foreground: #F0F4F8;
+  --sidebar-primary: #2B7BC4;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1F2937;
-  --sidebar-accent-foreground: #E5E7EB;
-  --sidebar-border: rgba(255,255,255,0.08);
-  --sidebar-ring: #3B82F6;
+  --sidebar-accent: #1A2744;
+  --sidebar-accent-foreground: #F0F4F8;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #2B7BC4;
 }
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback', sans-serif;
@@ -103,8 +112,8 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
@@ -125,23 +134,74 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Premium typography system */
+  h1 {
+    @apply text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+  p {
+    @apply leading-relaxed;
+  }
 }
 
-/* Custom utilities for JTH Graphix */
+/* Premium utilities for JTH Graphix */
 @layer utilities {
+  /* Text effects */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-primary;
   }
   
-  .glow-blue {
-    box-shadow: 0 0 40px rgba(0, 74, 173, 0.3);
+  .text-gradient-dark {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-dark via-primary to-primary-light;
   }
   
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 30px rgba(30, 91, 168, 0.25);
   }
   
+  .glow-primary-lg {
+    box-shadow: 0 0 60px rgba(30, 91, 168, 0.2);
+  }
+  
+  /* Glass morphism */
   .glass {
-    @apply bg-card/80 backdrop-blur-xl border border-border;
+    @apply bg-white/80 dark:bg-card/60 backdrop-blur-xl border border-border;
+  }
+  
+  .glass-dark {
+    @apply bg-card/80 dark:bg-card/60 backdrop-blur-xl border border-border;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-1 hover:glow-primary;
+  }
+  
+  /* Premium borders */
+  .border-gradient {
+    background-image: linear-gradient(90deg, transparent, var(--primary), transparent);
+    background-size: 200% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /* Grid utilities for portfolio/services */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
   }
 }
