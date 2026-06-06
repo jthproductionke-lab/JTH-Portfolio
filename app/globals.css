@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -79,11 +78,6 @@
   --sidebar-border: rgba(255, 255, 255, 0.08);
   --sidebar-ring: #2B7BC4;
 }
-
-@import 'tailwindcss';
-@import 'tw-animate-css';
-
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback', sans-serif;
@@ -189,7 +183,11 @@
   
   /* Hover effects */
   .hover-lift {
-    @apply transition-smooth hover:-translate-y-1 hover:glow-primary;
+    @apply transition-smooth hover:-translate-y-1;
+  }
+  
+  .hover-lift:hover {
+    box-shadow: 0 0 30px rgba(30, 91, 168, 0.25);
   }
   
   /* Premium borders */
