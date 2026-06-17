@@ -1,87 +1,86 @@
 @import 'tailwindcss';
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* JTH Graphix Production - Official Brand Colors - Light Mode */
-  --background: #FAFBFC;
-  --foreground: #0A0E27;
+  /* JTH Graphix Production - Exact Brand Colors from Specification */
+  --background: #F8FAFC;
+  --foreground: #101828;
   --card: #FFFFFF;
-  --card-foreground: #0A0E27;
+  --card-foreground: #101828;
   --popover: #FFFFFF;
-  --popover-foreground: #0A0E27;
-  --primary: #1E5BA8;
+  --popover-foreground: #101828;
+  --primary: #004aad;
   --primary-foreground: #FFFFFF;
-  --primary-light: #2B7BC4;
-  --primary-dark: #164080;
-  --secondary: #F0F4F8;
-  --secondary-foreground: #0A0E27;
-  --muted: #E8ECF1;
-  --muted-foreground: #6B7E99;
-  --accent: #FFFFFF;
-  --accent-foreground: #1E5BA8;
+  --secondary: #FF7A1A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #FF7A1A;
+  --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(30, 91, 168, 0.08);
-  --input: rgba(30, 91, 168, 0.06);
-  --ring: #1E5BA8;
-  --chart-1: #1E5BA8;
-  --chart-2: #2B7BC4;
-  --chart-3: #164080;
-  --chart-4: #0A0E27;
-  --chart-5: #6B7E99;
+  --border: rgba(0, 74, 173, 0.08);
+  --input: rgba(0, 74, 173, 0.06);
+  --ring: #004aad;
+  --chart-1: #004aad;
+  --chart-2: #FF7A1A;
+  --chart-3: #0369A1;
+  --chart-4: #101828;
+  --chart-5: #6B7280;
   --radius: 0.75rem;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #0A0E27;
-  --sidebar-primary: #1E5BA8;
+  --sidebar-foreground: #101828;
+  --sidebar-primary: #004aad;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F0F4F8;
-  --sidebar-accent-foreground: #0A0E27;
-  --sidebar-border: rgba(30, 91, 168, 0.08);
-  --sidebar-ring: #1E5BA8;
+  --sidebar-accent: #F3F4F6;
+  --sidebar-accent-foreground: #101828;
+  --sidebar-border: rgba(0, 74, 173, 0.08);
+  --sidebar-ring: #004aad;
 }
 
 .dark {
-  /* JTH Graphix Production - Official Brand Colors - Dark Mode */
-  --background: #0A0E27;
-  --foreground: #F0F4F8;
-  --card: #111C3D;
-  --card-foreground: #F0F4F8;
-  --popover: #111C3D;
-  --popover-foreground: #F0F4F8;
-  --primary: #2B7BC4;
+  /* JTH Graphix Production - Dark Mode */
+  --background: #0F1117;
+  --foreground: #FFFFFF;
+  --card: #1A1F2E;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1F2E;
+  --popover-foreground: #FFFFFF;
+  --primary: #0052CC;
   --primary-foreground: #FFFFFF;
-  --primary-light: #3A92DC;
-  --primary-dark: #1E5BA8;
-  --secondary: #1A2744;
-  --secondary-foreground: #F0F4F8;
-  --muted: #1A2744;
-  --muted-foreground: #A0B3CC;
-  --accent: #FFFFFF;
-  --accent-foreground: #1E5BA8;
-  --destructive: #EF4444;
+  --secondary: #FF9D3D;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2D333B;
+  --muted-foreground: #8B949E;
+  --accent: #FF9D3D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #F85149;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(255, 255, 255, 0.08);
-  --input: rgba(255, 255, 255, 0.06);
-  --ring: #2B7BC4;
-  --chart-1: #2B7BC4;
-  --chart-2: #3A92DC;
-  --chart-3: #1E5BA8;
-  --chart-4: #F0F4F8;
-  --chart-5: #A0B3CC;
-  --sidebar: #111C3D;
-  --sidebar-foreground: #F0F4F8;
-  --sidebar-primary: #2B7BC4;
+  --border: rgba(0, 82, 204, 0.15);
+  --input: rgba(0, 82, 204, 0.1);
+  --ring: #0052CC;
+  --chart-1: #0052CC;
+  --chart-2: #FF9D3D;
+  --chart-3: #3FB950;
+  --chart-4: #FFFFFF;
+  --chart-5: #8B949E;
+  --sidebar: #1A1F2E;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #0052CC;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1A2744;
-  --sidebar-accent-foreground: #F0F4F8;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
-  --sidebar-ring: #2B7BC4;
+  --sidebar-accent: #2D333B;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(0, 82, 204, 0.15);
+  --sidebar-ring: #0052CC;
 }
 
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback', sans-serif;
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --font-display: 'Sora', 'Sora Fallback', sans-serif;
+  --font-mono: 'Manrope', 'Manrope Fallback', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,24 +125,29 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
   
-  /* Premium typography system */
+  /* Premium typography with Sora for headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+  
   h1 {
-    @apply text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-5xl lg:text-6xl xl:text-7xl leading-[1.1];
   }
   h2 {
-    @apply text-3xl lg:text-4xl font-bold tracking-tight;
+    @apply text-4xl lg:text-5xl leading-[1.2];
   }
   h3 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-2xl lg:text-3xl leading-[1.3];
   }
   h4 {
-    @apply text-xl font-semibold tracking-tight;
+    @apply text-xl lg:text-2xl leading-[1.3];
   }
+  
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-base lg:text-lg;
   }
 }
 
@@ -151,20 +155,20 @@
 @layer utilities {
   /* Text effects */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary;
-  }
-  
-  .text-gradient-dark {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
   
   /* Glow effects */
   .glow-primary {
-    box-shadow: 0 0 30px rgba(30, 91, 168, 0.25);
+    box-shadow: 0 0 30px rgba(0, 74, 173, 0.2);
   }
   
   .glow-primary-lg {
-    box-shadow: 0 0 60px rgba(30, 91, 168, 0.2);
+    box-shadow: 0 0 60px rgba(0, 74, 173, 0.15);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 0 30px rgba(255, 122, 26, 0.2);
   }
   
   /* Glass morphism */
@@ -172,8 +176,8 @@
     @apply bg-white/80 dark:bg-card/60 backdrop-blur-xl border border-border;
   }
   
-  .glass-dark {
-    @apply bg-card/80 dark:bg-card/60 backdrop-blur-xl border border-border;
+  .glass-sm {
+    @apply bg-white/70 dark:bg-card/50 backdrop-blur-lg border border-border;
   }
   
   /* Smooth transitions */
@@ -191,8 +195,18 @@
   }
   
   .hover-lift:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0 30px rgba(30, 91, 168, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 74, 173, 0.1);
+  }
+  
+  /* Subtle hover scale */
+  .hover-scale {
+    transition-property: transform;
+    transition-duration: 300ms;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.02);
   }
   
   /* Premium borders */
@@ -203,7 +217,7 @@
     background-repeat: no-repeat;
   }
   
-  /* Grid utilities for portfolio/services */
+  /* Grid utilities */
   .grid-responsive {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
   }
